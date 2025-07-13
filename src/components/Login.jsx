@@ -6,7 +6,7 @@ import { auth } from "../utils/Firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { AVATAR_URL } from "../utils/constants";
+import { AVATAR_URL, BG_URL } from "../utils/constants";
 
 const Login = ()=>{
     const dispatch = useDispatch();
@@ -76,7 +76,7 @@ const Login = ()=>{
             
             <Header/>
             <div>
-            <img className="absolute"src ="https://assets.nflxext.com/ffe/siteui/vlv3/05e91faa-6f6d-4325-934e-5418dcc2567b/web/IN-en-20250630-TRIFECTA-perspective_159086b1-425f-435b-bcd5-1ed8039cdef9_large.jpg" />
+            <img className="absolute"src ={BG_URL} />
         </div>
         <form onSubmit={(e)=>e.preventDefault()}
         className=" w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg opacity-80  ">
