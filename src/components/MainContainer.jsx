@@ -13,7 +13,7 @@ const MainContainer = () => {
   const selectedMovie = movies.find((m) => m.id === selectedMovieId);
   const movieToUse = selectedMovie || mainMovie;
 
-  const { original_title, overview, id,vote_avearge,release_date } = movieToUse;
+  const { original_title, overview, id} = movieToUse;
 
   return (
     <div className="pt-[30%] md:pt-0">
@@ -22,7 +22,7 @@ const MainContainer = () => {
       <VideoBackground id={id} />
 
       {selectedMovieId && (
-        <div className="px-12 mt-8">
+        <div className="px-12 mt-8 relative z-30">
           <MovieDetails id={selectedMovieId} />
         </div>
       )}
