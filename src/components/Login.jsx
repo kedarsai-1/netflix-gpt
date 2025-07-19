@@ -75,11 +75,11 @@ const Login = ()=>{
         <div>
             
             <Header/>
-            <div>
-            <img className="absolute"src ={BG_URL} />
+            <div className="absolute">
+            <img className="h-screen object-cover w-screen"src ={BG_URL} />
         </div>
         <form onSubmit={(e)=>e.preventDefault()}
-        className=" w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg opacity-80  ">
+        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg opacity-80  ">
         <h1 className="font-bold text-2xl">{isSignInForm?"Sign In":"Sign up"}</h1>
         {!isSignInForm &&(
             <input ref={name}
@@ -99,7 +99,7 @@ const Login = ()=>{
             placeholder="Password"
              className="p-4 m-4 text-white bg-gray-600"/>
              <p className="text-red-500 font-bold p-4">{errorMessage}</p>
-            <button className ='p-4 m-4 bg-red-600 w-full rounded-lg cursor-pointer'
+            <button className ='p-4 m-4 bg-red-600  md:w-full rounded-lg cursor-pointer'
             onClick={handlebuttonClick}>
                 {isSignInForm?"Sign In":"Sign up"} </button>
             <p className="py-4 text-sm cursor-pointer"
